@@ -1,0 +1,46 @@
+.computers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 7px;
+    margin: 70px;
+}
+
+.computer_row {
+    flex: none;
+}
+
+.p {
+    font-size: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+  
+.column {
+    flex: 0 1 auto;
+}
+
+.column p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+* {
+    background-color: yellow;
+}
+
+.body {
+    background-color: yellow;
+}
+
+h1 {
+    font-size: 80px;
+    letter-spacing: 10px;
+    color:blue;
+    text-align: center;
+}
