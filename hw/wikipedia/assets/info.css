@@ -1,0 +1,80 @@
+@font-face {
+    font-family: imposter;
+    src: url("fonts/Impostograph-Regular.otf") format(opentype);
+    src: url("fonts/Impostograph-Regular.ttf");
+}
+
+@font-face {
+    font-family: amogus;
+    src: url("fonts/AmongUs-Regular.ttf");
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("fonts/poppins/Poppins-Regular.ttf");
+}
+
+body {
+    background-image: url("space.jpg");
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 95px;
+    letter-spacing: 2px;
+    font-family: imposter;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-family: poppins;
+    font-size: 20px;
+}
+
+button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(142, 151, 168);
+    background-image: url("https://media.giphy.com/media/Asb0LwwJP9o9Y2VZip/giphy.gif");    
+    background-size: cover;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border-width: 5px;
+    border-color: rgb(75, 75, 75);
+}
+
+img {
+    max-width: 100%;
+}
+
+.chunk {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.elem {
+    flex: 0 0 30%;
+}
+
+.text_column {
+    flex: 0 0 40%;
+}
+
+.text_flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-flow: column;
+    align-items: center;
+}
+
+.basics {
+    max-width: 80%;
+}

@@ -1,0 +1,191 @@
+@font-face {
+    font-family: imposter;
+    src: url("fonts/Impostograph-Regular.otf") format(opentype);
+    src: url("fonts/Impostograph-Regular.ttf");
+}
+
+@font-face {
+    font-family: amogus;
+    src: url("fonts/AmongUs-Regular.ttf");
+}
+
+body {
+    background-image: url("space.jpg");
+}
+
+.header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+h1 {
+    font-weight: normal;
+    color: white;
+    opacity: .5;
+    font-family: amogus;
+    font-size: 190px;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+.s {
+    font-weight: normal;
+    color: red;
+    font-family: amogus;
+    position: fixed;
+    font-size: 190px;
+    right: 0%;
+    top: 50%;
+    z-index: 3;
+    opacity: 0;
+    transform: translate(0%, -50%);
+}
+
+.s:hover {
+    transition: opacity .75s cubic-bezier(.05,.28,.14,1.21);
+    opacity: 1;
+}
+
+p {
+    color: white;
+    font-family: imposter;
+    font-size: 20px;
+    text-align: center;
+    line-height: 120%;
+}
+
+img {
+    display: none;
+}
+
+button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(142, 151, 168);
+    background-image: url("https://media.giphy.com/media/Asb0LwwJP9o9Y2VZip/giphy.gif");
+    background-size: 100%;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    color: white;
+    border-width: 5px;
+    border-color: rgb(75, 75, 75);
+    z-index: 99;
+}
+
+.text_flex {
+    padding: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.basics {
+    max-width: 20%;
+    z-index: 3;
+}
+
+.one {
+    color: orange;
+    transform: rotate(1deg);
+}
+
+.one:hover {
+    transition: transform 3s linear;
+    transform: rotate(-1deg);
+}
+
+.two {
+    color: white;
+    transform: rotate(-2deg);
+}
+
+.two:hover {
+    transition: transform 3s linear;
+    transform: rotate(1deg);
+}
+
+.three {
+    color: cyan;
+    transform: rotate(-3deg) translate(10%, 5%);
+}
+
+.three:hover {
+    transition: transform 3s linear;
+    transform: rotate(1deg) translate(10%, 5%);
+}
+
+.four {
+    color: pink;
+    transform: translate(0%, -50%);
+}
+
+.four:hover {
+    transition: transform 3s linear;
+    transform: rotate(-2deg) translate(0%, -50%);
+}
+
+.five {
+    color: lime;
+    transform: rotate(2.3deg) translate(0%, 20%);
+}
+
+.five:hover {
+    transition: transform 3s linear;
+    transform: rotate(-1deg) translate(0%, 20%);
+}
+
+.six {
+    color: rgb(169, 130, 223);
+    transform: rotate(-1.2deg) translate(0%, -10%);
+}
+
+.six:hover {
+    transition: transform 3s linear;
+    transform: rotate(1deg) translate(0%, -10%);
+}
+
+.seven {
+    color: yellow;
+    transform: translate(0%, 50%);
+}
+
+.seven:hover {
+    transition: transform 1s linear;
+    transform: rotate(-2deg) translate(0%, 50%);
+}
+
+.eight {
+    color: coral;
+    transform: rotate(2.3deg) translate(-10%, -20%);
+}
+
+.eight:hover {
+    transition: transform 3s linear;
+    transform: rotate(1deg) translate(-10%, -20%);
+}
+
+.nine {
+    color: tan;
+    transform: rotate(1deg) translate(10%, 0%);
+}
+
+.nine:hover {
+    transition: transform 3s linear;
+    transform: rotate(-1deg) translate(10%, 0%);
+}
+
+.ten {
+    color: rgb(87, 111, 255);
+    transform: rotate(-1.4deg);
+}
+
+.ten:hover {
+    transition: transform 3s linear;
+    transform: rotate(1deg);
+}

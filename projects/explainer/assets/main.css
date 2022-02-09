@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.half {
+    flex: 50%;
+    background-color: coral;
+}
+
+.second_half {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: lightblue;
+    justify-content: space-between;
+}
+
+.quarter {
+    flex: 50%;
+}
