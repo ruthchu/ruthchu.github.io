@@ -7,11 +7,23 @@
     <link rel="stylesheet" type="text/css" href="assets/fifth.css">
     <link rel="icon" type="image/png" href="assets/images/cursor.png">
     <title>how to fix a bug</title>
+
+    <script>
+        var urlArray = [
+            "index.html",
+            "final.html"
+        ];
+        function randomURL() {
+            var randNum = Math.floor(Math.random() * urlArray.length);
+            var newURL = urlArray[randNum];
+            location.href = newURL;
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
         <div class="hope">
-            okay, here goes, hope this fixes it...<a href="first.html">_</a>
+            okay, here goes, hope this fixes it...<a href="#" onclick="randomURL();">_</a>
         </div>
     </div>
 </body>
