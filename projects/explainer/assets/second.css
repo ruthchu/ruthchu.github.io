@@ -1,0 +1,45 @@
+body {
+    background-image: url(images/perlin.png);
+    background-size: 2000px;
+}
+
+.first {
+    position: absolute;
+    top: 0%;
+    left: 55%;
+    width: 45%;
+    background-color: black;
+    min-height: 100vh;
+}
+
+.line_one {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.line_two {
+    position: absolute;
+    top: 65%;
+    left: 60%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.line_three {
+    position: absolute;
+    top: 90%;
+    left: 82%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+a:link {
+    background-color: white;
+}
+
+a:hover {
+    background-color: black;
+}

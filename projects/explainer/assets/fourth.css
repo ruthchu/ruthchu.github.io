@@ -1,0 +1,42 @@
+body {
+    background-image: url(images/perlin.png);
+    background-size: 2000px;
+}
+
+.typo {
+    top: 60%;
+    left: 55%;
+    min-width: 25%;
+    min-height: 40%;
+    background-color: black;
+    position: absolute;
+    
+}
+
+.one {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-width: 25%;
+    max-width: 100%;
+    line-height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.two {
+    position: absolute;
+    top: 85%;
+    right: 5%;
+    max-width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+a:link {
+    background-color: white;
+}
+
+a:hover {
+    background-color: black;
+}

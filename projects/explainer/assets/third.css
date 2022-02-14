@@ -1,0 +1,37 @@
+body {
+    background-image: url(images/perlin.png);
+    background-size: 2000px;
+}
+
+.quarter {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    width: 45%;
+    min-height: 40vh;
+    background-color: black;
+}
+
+.list_one {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.list_two {
+    position: absolute;
+    left: 60%;
+    top: 70%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+a:link {
+    background-color: white;
+}
+
+a:hover {
+    background-color: black;
+}

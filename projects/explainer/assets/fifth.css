@@ -1,0 +1,24 @@
+body {
+    background-image: url(images/perlin.png);
+    background-size: 2000px;
+}
+
+.hope {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    min-width: 25%;
+    min-height: 10%;
+    background-color: black;
+    max-width: 19%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+a:link {
+    background-color: white;
+}
+
+a:hover {
+    background-color: black;
+}

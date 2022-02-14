@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+.error {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    max-width: 25%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+a:link {
+    background-color: white;
+}
+
+a:hover {
+    background-color: black;
+}
