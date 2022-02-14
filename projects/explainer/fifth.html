@@ -9,12 +9,24 @@
     <title>how to fix a bug</title>
 
     <script>
+        // Clamp number between two values with the following line:
+        function clamp(num, min, max) {
+            num = Math.min(Math.max(num, min), max);
+            return num;
+        }
+
+        // Array of webpages that the function randomURL chooses from
         var urlArray = [
             "index.html",
             "final.html"
         ];
+
         function randomURL() {
-            var randNum = Math.floor(Math.random() * urlArray.length);
+            // Weights the random number so it is more likely to land on the 'final.html' webpage
+            var weightedVal = clamp(Math.random() + 0.2, 0.0, .9);
+            console.log(weightedVal);
+            var randNum = Math.floor(weightedVal * urlArray.length);
+            console.log(randNum);
             var newURL = urlArray[randNum];
             location.href = newURL;
         }
@@ -22,7 +34,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="hope">
+        <div class="text_hope">
             okay, here goes, hope this fixes it...<a href="#" onclick="randomURL();">_</a>
         </div>
     </div>

@@ -1,4 +1,4 @@
-.error {
+.text_error {
     position: absolute;
     top: 60%;
     left: 55%;
@@ -7,7 +7,7 @@
     color: black;
 }
 
-.restart {
+.text_restart {
     position: absolute;
     bottom: 5%;
     right: 5%;

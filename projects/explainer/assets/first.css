@@ -1,7 +1,8 @@
 body {
     background-color: black;
 }
-.error {
+
+.text_error {
     position: absolute;
     top: 60%;
     left: 55%;

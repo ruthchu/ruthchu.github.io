@@ -3,7 +3,7 @@ body {
     background-size: 2000px;
 }
 
-.typo {
+.bg_black_square {
     top: 60%;
     left: 55%;
     min-width: 25%;
@@ -13,7 +13,7 @@ body {
     
 }
 
-.one {
+.text_dumb {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -24,7 +24,7 @@ body {
     color: white;
 }
 
-.two {
+.text_typo {
     position: absolute;
     top: 85%;
     right: 5%;
