@@ -23,7 +23,7 @@
 
         function randomURL() {
             // Weights the random number so it is more likely to land on the 'final.html' webpage
-            var weightedVal = clamp(Math.random() + 0.2, 0.0, .9);
+            var weightedVal = clamp(Math.random() + 0.1, 0.0, .9);
             console.log(weightedVal);
             var randNum = Math.floor(weightedVal * urlArray.length);
             console.log(randNum);
