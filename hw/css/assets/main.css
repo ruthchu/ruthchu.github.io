@@ -1,0 +1,298 @@
+@keyframes fan_spin_left {
+    0% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(60deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes fan_spin_right {
+    0% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-75deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes box_glow {
+    0% {
+        box-shadow: 0 0 20px 1px white;
+    }
+
+    50% {
+        box-shadow: 0 0 30px 1px white;
+    }
+
+    100% {
+        box-shadow: 0 0 20px 1px white;
+    }
+}
+
+@keyframes circle_light {
+    0% {
+        opacity: 20%;
+        transform: translate(0, 0) scale(100%);
+    }
+
+    30% {
+        opacity: 30%;
+        transform: translate(100px, 30px) scale(75%);
+    }
+
+    75% {
+        opacity: 40%;
+        transform: translate(120px, -50px) scale(50%);
+    }
+
+    100% {
+        opacity: 20%;
+        transform: translate(0, 0) scale(100%);
+    }
+}
+
+@keyframes fireworks {
+    0% {
+        opacity: 0%;
+        transform: translate(0, 0) scale(0);
+    }
+
+    90% {
+        opacity: 75%;
+        transform: translate(0vh, -50vh) scale(100%);
+    }
+
+    100% {
+        opacity: 0%;
+        transform: translate(0vh, -50vh) scale(100%);
+    }
+}
+
+.left_fan {
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: fan_spin_left;
+    position: fixed;
+    bottom: 0;
+    left: -10%;
+    transform-origin: bottom center;
+    z-index: 99;
+}
+
+.right_fan {
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: fan_spin_right;
+    position: fixed;
+    transform-origin: bottom center;
+    right: -10%;
+    bottom: 0;
+    z-index: 99;
+}
+
+html, body {
+    margin: 0px;
+}
+
+.bg {
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 48%, rgba(0,212,255,1) 100%);
+}
+
+.building_flex {
+    height: 100vh;
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.fireworks_1 {
+    position: fixed;
+    bottom: 0;
+    animation-name: fireworks;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    z-index: 0;
+}
+
+.fireworks_2 {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    animation-name: fireworks;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    z-index: 0;
+}
+
+.building_1 {
+    height: 20vh;
+    background-color: #ff6392;
+    min-width: 15%;
+    animation-name: box_glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    z-index: 1;
+}
+
+.building_2 {
+    height: 50vh;
+    background-color: #ffd747;
+    animation-name: box_glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    min-width: 20%;
+    z-index: 1;
+}
+
+.building_3 {
+    height: 70vh;
+    background-color: #d428b7;
+    animation-name: box_glow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    min-width: 15%;
+    z-index: 1;
+}
+
+.building_4 {
+    height: 40vh;
+    background-color: #ff6f3b;
+    animation-name: box_glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    min-width: 15%;
+    z-index: 1;
+}
+
+.building_5 {
+    height: 20vh;
+    background-color: #ffa95e;
+    box-shadow: 0 0 20px 1px white;
+    min-width: 10%;
+    z-index: 1;
+}
+
+.building_6 {
+    height: 30vh;
+    background-color: #c557d9;
+    animation-name: box_glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    min-width: 12%;
+    z-index: 1;
+}
+
+.yellow_light {
+    height: 100px;
+    width: 100px;
+    animation-name: circle_light;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #fffdc4;
+    z-index: 2;
+}
+
+.blue_light {
+    height: 100px;
+    width: 100px;
+    animation-name: circle_light;
+    animation-duration: 10s;
+    animation-delay: -4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 25%;
+    right: 10%;
+    border-radius: 50%;
+    background-color: #c4faff;
+    z-index: 2;
+}
+
+.purple_light {
+    height: 100px;
+    width: 100px;
+    animation-name: circle_light;
+    animation-duration: 5s;
+    animation-delay: -3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 10%;
+    left: 24%;
+    border-radius: 50%;
+    background-color: #ecc4ff;
+    z-index: 2;
+}
+
+.orange_light {
+    height: 100px;
+    width: 100px;
+    animation-name: circle_light;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 30%;
+    left: 5%;
+    border-radius: 50%;
+    background-color: #ffc4f0;
+    z-index: 2;
+}
+
+.red_light {
+    height: 100px;
+    width: 100px;
+    animation-name: circle_light;
+    animation-duration: 7s;
+    animation-delay: -6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: fixed;
+    top: 15%;
+    left: 60%;
+    border-radius: 50%;
+    background-color: #ffdfc4;
+    z-index: 2;
+}
+
+.red_orange_light {
+    height: 100px;
+    width: 100px;
+    animation-name: circle_light;
+    animation-duration: 8s;
+    animation-delay: -5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: fixed;
+    bottom: 25%;
+    left: 25%;
+    border-radius: 50%;
+    background-color: #fb8aff;
+    z-index: 2;
+}
