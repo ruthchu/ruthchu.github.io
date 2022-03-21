@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(0, 1, 70);
+}
+.text {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+.text:hover {
+    color:white;
+    text-shadow: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+img {
+    max-width: 25vw;
+    height: auto;
+}
+
+audio {
+    min-width:350px;
+}

@@ -1,0 +1,95 @@
+body {
+    background-color:rgb(65, 65, 65);
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+    margin:0;
+    height:100vh;
+    align-items:center;
+    align-content:center;
+    padding:0 8rem;
+}
+
+/*thought bubbles taken from:
+   https://codepen.io/quadbaup/pen/rKOKQv 
+*/
+.thought {
+  display:flex;
+  background-color:#fff;
+  padding:20px;
+  border-radius:30px;
+  min-width:40px;
+  max-width:220px;
+  min-height:40px;
+  margin:20px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 5px 2px white;
+}
+.thought:before,
+.thought:after {
+  content:"";
+  background-color:#fff;
+  border-radius:50%;
+  display:block;
+  position:absolute;
+  z-index:-1;
+}
+.thought:before {
+  width:44px;
+  height:44px;
+  top:-12px;
+  left:28px;
+  box-shadow:-50px 30px 5px -12px #fff,
+              0px 0px 5px 2px white;
+}
+.thought:after {
+  bottom:-10px;
+  right:26px;
+  width:30px;
+  height:30px;
+  box-shadow:40px -34px 5px 0 #fff,
+             -28px -6px 5px -2px #fff,
+             -24px 17px 5px -6px #fff,
+             -5px 25px 5px -10px #fff,
+             0px 0px 5px 2px white;
+  
+}
+/* hover functionality added to bring div into focus*/
+.thought:hover {
+    box-shadow: none;
+    color: black;
+    text-shadow: none;
+    cursor: pointer;
+}
+.thought:hover::before {
+    box-shadow:-50px 30px 0 -12px #fff;
+}
+.thought:hover::after {
+    content:"";
+    background-color:#fff;
+    border-radius:50%;
+    display:block;
+    position:absolute;
+    z-index:-1;
+    bottom:-10px;
+    right:26px;
+    width:30px;
+    height:30px;
+    box-shadow:40px -34px 0 0 #fff,
+               -28px -6px 0 -2px #fff,
+               -24px 17px 0 -6px #fff,
+               -5px 25px 0 -10px #fff;
+}
+.thought:hover:not(:hover) {
+    background-color: red;
+}
+
+a:link { text-decoration: none;}  
+a:visited { text-decoration: none; }  
+a:hover { text-decoration: none; }  
+a:active { text-decoration: none; }  
