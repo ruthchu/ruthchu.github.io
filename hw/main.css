@@ -1,0 +1,35 @@
+@keyframes jump {
+    0% { transform: translate(-0%, -0%) scale(1.25, 0.75); }
+    50% { transform: translate(-0%, -100%) scale(1, 1); }
+    55% { transform: translate(-0%, -100%) rotate(15deg); }
+    60% { transform: translate(-0%, -100%) rotate(-15deg); }
+    65% { transform: translate(-0%, -100%) rotate(15deg); }
+    70% { transform: translate(-0%, -100%) rotate(-15deg); }
+    100% { transform: translate(-0%, -0%) scale(1.25, 0.75); }
+}
+
+body {
+  background-color:  #fcba03;
+  margin: 0;
+  padding: 200px;
+}
+
+.phone {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.app {
+  opacity: .5;
+  mix-blend-mode: color-burn;
+  color: white;
+  font-size: 36px;
+  font-family: arial;
+  border-radius: 100px;
+  text-align: center;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  /*row-gap: 100px;*/
+  margin-bottom: 10px;
+}
