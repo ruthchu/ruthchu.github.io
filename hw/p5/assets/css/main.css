@@ -1,0 +1,22 @@
+body {
+    background: rgb(153, 235, 255);
+    margin: 0;
+    padding: 0;
+    }
+
+.container {
+    z-index: 0;
+    display:  flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:  33vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    letter-spacing: 1px;
+  }
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
