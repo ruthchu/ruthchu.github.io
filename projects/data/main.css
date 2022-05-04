@@ -1,34 +1,81 @@
+.wrapper {
+  margin-bottom: 40px;
+}
+
 body {
   /*background-color: #F4D8F4;*/
   font-family: 'Times New Roman', Times, serif;
 }
 
+/*BOOKSHELF STYLING---------------------------------------------------------*/
 .bookshelf {
   /*background-color:  #ff30da;*/
   background-color: #e0eddf;
+}
+
+h2 {
+  font-family: "boldFont";
+  color: #598057;
+  text-align: center;
+  margin: 0;
+}
+
+.year {
+  border: 40px ridge #a86032;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: #614b39;
+  font-family: "boldFont";
+  font-size: 100px;
+  color:#598057;
 }
 
 .entry {
   border: 2px solid black;
   font-size: 22px;
   display: inline-block;
-  margin: 80px 0 0;
-  width: 250px;
+  margin: 50px 0 0;
+  width: 150px;
   height: 250px;
-  filter: grayscale(100%);
+  background-size: cover;
   /*animation: fadeIn 3s ease-in;*/
-
-}
-
-.clicked {
-  background-color: lightcoral;
 }
 
 .selected {
   height: 300px;
   filter: grayscale(0%) !important;
+  margin: 0 !important;
 }
 
+.entry:hover {
+  filter: grayscale(0%) !important;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  z-index: 1000;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  border: 2px solid black;
+  top: -2px;
+  left: -2px;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  background-color: #c2d4c1;
+  color: #598057;
+  font-family: "default";
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+/*NAVIGATION STYLING---------------------------------------------------------*/
 .nav {
   display: flex;
   gap: 10px;
@@ -39,37 +86,102 @@ body {
   background-color: white;
 }
 
-.navItem {
+.nav1 {
+  font-family: "action";
+}
+
+.nav2 {
+  font-family: "adventure";
+}
+
+.nav3 {
+  font-family: "comedy";
+}
+
+.nav4 {
+  font-family: "drama";
+}
+
+.nav5 {
+  font-family: "fantasy";
+}
+
+.nav6 {
+  font-family: "genderBend";
+}
+
+.nav7 {
+  font-family: "historical";
+}
+
+.nav8 {
+  font-family: "horror";
+}
+
+.nav9 {
+  font-family: "josei";
+}
+
+.nav10 {
+  font-family: "martial";
+}
+
+.nav11 {
+  font-family: "mature";
+}
+
+.nav12 {
+  font-family: "mystery";
+}
+
+.nav13 {
+  font-family: "psych";
+}
+
+.nav14 {
+  font-family: "romance";
+}
+
+.nav15 {
+  font-family: "school";
+}
+
+.nav16 {
+  font-family: "scifi";
+}
+
+.nav17 {
+  font-family: "seinen";
+}
+
+.nav18 {
+  font-family: "shoujo";
+}
+
+.nav19 {
+  font-family: "shounen";
+}
+
+.nav20 {
+  font-family: "sliceoflife";
+}
+
+.nav21 {
+  font-family: "sports";
+}
+
+.nav22 {
+  font-family: "supernatural";
+}
+
+.nav23 {
+  font-family: "tragedy";
+}
+
+/* .navItem {
   font-size: 20px;
-}
-
-.year {
-  border: 40px ridge #a86032;
-  display: flex;
-  flex-flow: row-reverse;
-  align-items: flex-end;
-  background-color: #614b39;
-}
-
-nav {
-  display: flex;
-  left: 0;
-  top: 0;
-  position: fixed;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
-.selected {
-  /*border-bottom: 1px solid;*/
-  background-color: black !important;
-  color: white;
-}
-
-.navlinks {
-  display: flex;
-}
+  font-family: "jpNumber";
+} */
 
 .navitem:hover {
   /*border-bottom: 1px solid;*/
@@ -88,4 +200,136 @@ nav {
   letter-spacing: 2px;
   font-size: 20px;
   /*font-weight: normal;*/
+}
+
+.clicked {
+  background-color: lightcoral;
+}
+
+/*ALL FONTS BELOW HERE--------------------------------------------------------*/
+@font-face {
+  font-family: "default";
+  src: url("assets/text/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'boldFont';
+  src: url('assets/text/theboldfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'action';
+  src: url('assets/text/Barbatrick.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "adventure";
+  src: url("assets/text/Adventure.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "comedy";
+  src: url("assets/text/Funnier.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "drama";
+  src: url("assets/text/Mermaid1001.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "fantasy";
+  src: url("assets/text/BUTTERSHINE\ SCRIPT.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "genderBend";
+  src: url("assets/text/Panipuri.otf") format("opentype"),
+  url("assets/text/Panipuri.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "historical";
+  src: url("assets/text/OptimusPrinceps.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "horror";
+  src: url("assets/text/Horrors.otf") format("opentype"),
+  url("assets/text/Horrors.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "josei";
+  src: url("assets/text/FeFCrm2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "martial";
+  src: url("assets/text/Big\ Black\ Bear\ Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mature";
+  src: url("assets/text/NotoSerif-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mystery";
+  src: url("assets/text/PoynterText\ Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "psych";
+  src: url("assets/text/Juice\ Avocado.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "romance";
+  src: url("assets/text/simplicity.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "school";
+  src: url("assets/text/Soda\ Land\ Free\ Version.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "scifi";
+  src: url("assets/text/Game\ Of\ Squids.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "seinen";
+  src: url("assets/text/Gelasio-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "shoujo";
+  src: url("assets/text/A\ little\ sunshine.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "shounen";
+  src: url("assets/text/GABRWFFR.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "sliceoflife";
+  src: url("assets/text/Comfortaa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "sports";
+  src: url("assets/text/kenyan\ coffee\ rg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "supernatural";
+  src: url("assets/text/Louis\ George\ Cafe\ Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "tragedy";
+  src: url("assets/text/Subway_Haze_1.1.ttf") format("truetype");
 }

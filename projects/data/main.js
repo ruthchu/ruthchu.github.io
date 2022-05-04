@@ -2,6 +2,7 @@
 console.log("Hello, Airtable");
 
 let selectedGenres = [];
+let genreArray = new Array(23).fill(0);
 
 // load the airtable library, call it "Airtable"
 let Airtable = require("airtable");
@@ -42,6 +43,21 @@ function gotAllManga(err) {
   //consoleLogManga();
   //showManga();
   addMangaToYearDiv();
+  addCountToGenreDiv();
+  // let tooltip = [];
+  // tooltip = document.querySelectorAll('.tooltip');
+  // document.addEventListener('mousemove', moveTooltip, false);
+  // let maxLeft = screen.width;
+  // let maxTop = screen.height;
+// function moveTooltip(e) {
+//   for (var i=tooltip.length; i--;) {
+//     let shiftX = Math.min(maxLeft, e.pageX);
+//     let shiftY = Math.min(maxTop, e.pageY);
+//     tooltip[i].style.left = shiftX + 'px';
+//     tooltip[i].style.top = shiftY + 'px';
+//     console.log(tooltip[i].style.left);
+//   }
+// }
 }
 
 // just loop through the books and console.log them
@@ -52,7 +68,8 @@ function consoleLogManga() {
   });
 }
 
-// loop through the books, create an h2 for each one, and add it to the page
+// loop through the books, make a div for each and add it to the proper year
+// also make a span that displays info on hover
 function addMangaToYearDiv() {
   console.log("addMangaToYearDiv()");
   mangaList.forEach((manga) => {
@@ -65,13 +82,22 @@ function addMangaToYearDiv() {
     // create a div for each manga
     let mangaDiv = document.createElement("div");
     mangaDiv.classList.add("entry");
-
-    // make title of manga show next to cursor on hover
-    mangaDiv.title = manga.fields.title;
+    mangaDiv.classList.add("tooltip");
+    let mangaSpan = document.createElement("span");
+    mangaSpan.classList.add("tooltiptext");
 
     // get associated image and display as greyscale background image
     mangaDiv.style.backgroundImage = "url(\""+manga.fields.cover+"\")";
     mangaDiv.style.filter = "grayscale(100%)";
+
+    let mangaImg = document.createElement("img");
+    mangaImg.src = manga.fields.cover;
+    mangaImg.style.height = "250px";
+    mangaSpan.appendChild(mangaImg);
+    let mangaTitle = document.createElement("h2");
+    mangaTitle.innerHTML += manga.fields.title;
+    mangaSpan.appendChild(mangaTitle);
+    mangaSpan.innerHTML += manga.fields.comment;
 
     // adds each class associated with the genre of the series
     let genresString = manga.fields.genres;
@@ -83,11 +109,93 @@ function addMangaToYearDiv() {
     genreArray.forEach((genre) => {
       genre = genre.replaceAll(" ", "");
       mangaDiv.classList.add(genre);
+      countGenre(genre);
     });
-
+    mangaDiv.appendChild(mangaSpan);
     yearDiv.appendChild(mangaDiv);
   });
   console.log("mangashown");
+}
+
+function addCountToGenreDiv() {
+  for (let i = 0; i < genreArray.length; i++) {
+    let divNum = "nav" + (i + 1);
+    let currDiv = document.querySelector("." + divNum);
+    currDiv.innerHTML += " (" + genreArray[i] + ")";
+  }
+}
+
+// function to count the number of series that belong to each genre
+function countGenre(genre) {
+  if (genre === "Action") {
+    genreArray[0] += 1;
+  }
+  if (genre === "Adventure") {
+    genreArray[1] += 1;
+  }
+  if (genre === "Comedy") {
+    genreArray[2] += 1;
+  }
+  if (genre === "Drama") {
+    genreArray[3] += 1;
+  }
+  if (genre === "Fantasy") {
+    genreArray[4] += 1;
+  }
+  if (genre === "GenderBender") {
+    genreArray[5] += 1;
+  }
+  if (genre === "Historical") {
+    genreArray[6] += 1;
+  }
+  if (genre === "Horror") {
+    genreArray[7] += 1;
+  }
+  if (genre === "Josei") {
+    genreArray[8] += 1;
+  }
+  if (genre === "MartialArts") {
+    genreArray[9] += 1;
+  }
+  if (genre === "Mature") {
+    genreArray[10] += 1;
+  }
+  if (genre === "Mystery") {
+    genreArray[11] += 1;
+  }
+  if (genre === "Psychological") {
+    genreArray[12] += 1;
+  }
+  if (genre === "Romance") {
+    genreArray[13] += 1;
+  }
+  if (genre === "SchoolLife") {
+    genreArray[14] += 1;
+  }
+  if (genre === "Sci-fi") {
+    genreArray[15] += 1;
+  }
+  if (genre === "Seinen") {
+    genreArray[16] += 1;
+  }
+  if (genre === "Shoujo") {
+    genreArray[17] += 1;
+  }
+  if (genre === "Shounen") {
+    genreArray[18] += 1;
+  }
+  if (genre === "SliceofLife") {
+    genreArray[19] += 1;
+  }
+  if (genre === "Sports") {
+    genreArray[20] += 1;
+  }
+  if (genre === "Supernatural") {
+    genreArray[21] += 1;
+  }
+  if (genre === "Tragedy") {
+    genreArray[22] += 1;
+  }
 }
 
 // checks whether a manga series contains all of the genres that are being selected
@@ -95,6 +203,7 @@ function addMangaToYearDiv() {
 // https://www.designcise.com/web/tutorial/how-to-check-if-an-array-contains-all-elements-of-another-array-in-javascript
 function filterObjects(items) {
   console.log("filter");
+  let count = 0;
   let mangaList = document.querySelectorAll(".entry");
   mangaList.forEach((manga) => {
     let genreIncluded = true;
@@ -108,13 +217,19 @@ function filterObjects(items) {
         }
       });
     }
+    let hoverSpan = manga.firstChild.firstChild;
+    console.log(hoverSpan);
     if (genreIncluded) {
+      hoverSpan.style.height = "300px";
       manga.classList.add("selected");
+      count++;
     }
     else {
+      hoverSpan.style.height = "250px";
       manga.classList.remove("selected");
     }
   });
+  updateSelectedCount(count);
 }
 
 function addRemoveClass(elem, className) {
@@ -131,4 +246,9 @@ function addRemoveClass(elem, className) {
   }
   filterObjects(selectedGenres);
   console.log(selectedGenres);
+}
+
+function updateSelectedCount(count) {
+  let selectedDiv = document.querySelector(".currSelect");
+  selectedDiv.innerHTML = "selected: " + count;
 }
