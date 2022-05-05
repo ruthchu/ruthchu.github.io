@@ -9,6 +9,7 @@
 </head>
 <body class="bookshelf">
   <div class="nav">
+    <div class="navItem currSelect">selected: 0</div>
     <div class="navItem nav1" onclick="addRemoveClass(this, 'Action')">action</div>
     <div class="navItem nav2" onclick="addRemoveClass(this, 'Adventure')">adventure</div>
     <div class="navItem nav3" onclick="addRemoveClass(this, 'Comedy')">comedy</div>
@@ -32,19 +33,18 @@
     <div class="navItem nav21" onclick="addRemoveClass(this, 'Sports')">sports</div>
     <div class="navItem nav22" onclick="addRemoveClass(this, 'Supernatural')">supernatural</div>
     <div class="navItem nav23" onclick="addRemoveClass(this, 'Tragedy')">tragedy</div>
-    <div class="navItem currSelect">selected: 0</div>
   </div>
   <div class="wrapper">
-    <div class="year2013 year">2013</div>
-    <div class="year2014 year">2014</div>
-    <div class="year2015 year">2015</div>
-    <div class="year2016 year">2016</div>
-    <div class="year2017 year">2017</div>
-    <div class="year2018 year">2018</div>
-    <div class="year2019 year">2019</div>
-    <div class="year2020 year">2020</div>
-    <div class="year2021 year">2021</div>
-    <div class="year2022 year">2022</div>
+    <div class="year2013 year"><div class="yearText">2013</div></div>
+    <div class="year2014 year"><div class="yearText">2014</div></div>
+    <div class="year2015 year"><div class="yearText">2015</div></div>
+    <div class="year2016 year"><div class="yearText">2016</div></div>
+    <div class="year2017 year"><div class="yearText">2017</div></div>
+    <div class="year2018 year"><div class="yearText">2018</div></div>
+    <div class="year2019 year"><div class="yearText">2019</div></div>
+    <div class="year2020 year"><div class="yearText">2020</div></div>
+    <div class="year2021 year"><div class="yearText">2021</div></div>
+    <div class="year2022 year"><div class="yearText">2022</div></div>
   </div>
 <script src="airtable.browser.js" type="text/javascript"></script>
 <script src="main.js" type="text/javascript"></script>

@@ -1,7 +1,3 @@
-.wrapper {
-  margin-bottom: 40px;
-}
-
 body {
   /*background-color: #F4D8F4;*/
   font-family: 'Times New Roman', Times, serif;
@@ -9,19 +5,19 @@ body {
 
 /*BOOKSHELF STYLING---------------------------------------------------------*/
 .bookshelf {
-  /*background-color:  #ff30da;*/
-  background-color: #e0eddf;
+  background-color: #b7ccb6;
 }
 
 h2 {
   font-family: "boldFont";
-  color: #598057;
+  color: #00470b;
   text-align: center;
   margin: 0;
 }
 
 .year {
-  border: 40px ridge #a86032;
+  position: relative;
+  border: 30px ridge #945c38;
   display: flex;
   flex-flow: row-reverse;
   align-items: flex-end;
@@ -30,6 +26,7 @@ h2 {
   font-family: "boldFont";
   font-size: 100px;
   color:#598057;
+  margin-right: 10%;
 }
 
 .entry {
@@ -37,14 +34,14 @@ h2 {
   font-size: 22px;
   display: inline-block;
   margin: 50px 0 0;
-  width: 150px;
-  height: 250px;
+  width: 180px;
+  height: 300px;
   background-size: cover;
   /*animation: fadeIn 3s ease-in;*/
 }
 
 .selected {
-  height: 300px;
+  height: 350px;
   filter: grayscale(0%) !important;
   margin: 0 !important;
 }
@@ -77,111 +74,39 @@ h2 {
 
 /*NAVIGATION STYLING---------------------------------------------------------*/
 .nav {
-  display: flex;
-  gap: 10px;
   position: fixed;
-  bottom: 0;
-  flex-wrap: wrap;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap-reverse;
   z-index: 20;
-  background-color: white;
+  top: 0;
+  right: 0;
+  justify-content: space-between;
+  min-height: 100%;
+  max-height: 101%;
+  padding: 2px 2px 2px 2px;
+  background-color: #598057;
 }
 
-.nav1 {
-  font-family: "action";
+.navItem {
+  background-color: #c2d4c1;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  color: #00470b;
+  font-size: 2vh;
+  user-select: none;
+  font-family: "default";
 }
 
-.nav2 {
-  font-family: "adventure";
+.navItem:hover {
+  cursor: pointer;
 }
 
-.nav3 {
-  font-family: "comedy";
+.currSelect {
+  font-family: 'boldFont';
+  background-color: #e0eddf;
+  pointer-events: none;
 }
-
-.nav4 {
-  font-family: "drama";
-}
-
-.nav5 {
-  font-family: "fantasy";
-}
-
-.nav6 {
-  font-family: "genderBend";
-}
-
-.nav7 {
-  font-family: "historical";
-}
-
-.nav8 {
-  font-family: "horror";
-}
-
-.nav9 {
-  font-family: "josei";
-}
-
-.nav10 {
-  font-family: "martial";
-}
-
-.nav11 {
-  font-family: "mature";
-}
-
-.nav12 {
-  font-family: "mystery";
-}
-
-.nav13 {
-  font-family: "psych";
-}
-
-.nav14 {
-  font-family: "romance";
-}
-
-.nav15 {
-  font-family: "school";
-}
-
-.nav16 {
-  font-family: "scifi";
-}
-
-.nav17 {
-  font-family: "seinen";
-}
-
-.nav18 {
-  font-family: "shoujo";
-}
-
-.nav19 {
-  font-family: "shounen";
-}
-
-.nav20 {
-  font-family: "sliceoflife";
-}
-
-.nav21 {
-  font-family: "sports";
-}
-
-.nav22 {
-  font-family: "supernatural";
-}
-
-.nav23 {
-  font-family: "tragedy";
-}
-
-/* .navItem {
-  font-size: 20px;
-  font-family: "jpNumber";
-} */
 
 .navitem:hover {
   /*border-bottom: 1px solid;*/
@@ -209,7 +134,7 @@ h2 {
 /*ALL FONTS BELOW HERE--------------------------------------------------------*/
 @font-face {
   font-family: "default";
-  src: url("assets/text/RobotoSlab-VariableFont_wght.ttf") format("truetype");
+  src: url("assets/text/Assistant-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {

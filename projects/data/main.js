@@ -44,20 +44,7 @@ function gotAllManga(err) {
   //showManga();
   addMangaToYearDiv();
   addCountToGenreDiv();
-  // let tooltip = [];
-  // tooltip = document.querySelectorAll('.tooltip');
-  // document.addEventListener('mousemove', moveTooltip, false);
-  // let maxLeft = screen.width;
-  // let maxTop = screen.height;
-// function moveTooltip(e) {
-//   for (var i=tooltip.length; i--;) {
-//     let shiftX = Math.min(maxLeft, e.pageX);
-//     let shiftY = Math.min(maxTop, e.pageY);
-//     tooltip[i].style.left = shiftX + 'px';
-//     tooltip[i].style.top = shiftY + 'px';
-//     console.log(tooltip[i].style.left);
-//   }
-// }
+  setYearDivZIndex();
 }
 
 // just loop through the books and console.log them
@@ -92,7 +79,7 @@ function addMangaToYearDiv() {
 
     let mangaImg = document.createElement("img");
     mangaImg.src = manga.fields.cover;
-    mangaImg.style.height = "250px";
+    mangaImg.style.height = "300px";
     mangaSpan.appendChild(mangaImg);
     let mangaTitle = document.createElement("h2");
     mangaTitle.innerHTML += manga.fields.title;
@@ -218,14 +205,13 @@ function filterObjects(items) {
       });
     }
     let hoverSpan = manga.firstChild.firstChild;
-    console.log(hoverSpan);
     if (genreIncluded) {
-      hoverSpan.style.height = "300px";
+      hoverSpan.style.height = "350px";
       manga.classList.add("selected");
       count++;
     }
     else {
-      hoverSpan.style.height = "250px";
+      hoverSpan.style.height = "300px";
       manga.classList.remove("selected");
     }
   });
@@ -245,10 +231,19 @@ function addRemoveClass(elem, className) {
     elem.classList.add("clicked");
   }
   filterObjects(selectedGenres);
-  console.log(selectedGenres);
 }
 
 function updateSelectedCount(count) {
   let selectedDiv = document.querySelector(".currSelect");
   selectedDiv.innerHTML = "selected: " + count;
+}
+
+function setYearDivZIndex() {
+  let zindex = 0;
+  for (let i = 2022; i >= 2013; i--) {
+    let selectYear = document.querySelector(".year" + i);
+    selectYear.style.zIndex = zindex;
+    zindex++;
+    console.log(i);
+  }
 }
