@@ -1,6 +1,5 @@
 body {
-    background-image: url(images/perlin.png);
-    background-size: 2000px;
+    background-image: url(images/static.png);
 }
 
 .text_hope {
@@ -15,10 +14,16 @@ body {
     color: white;
 }
 
+a {
+    color: #15e415;
+}
+
 a:link {
-    background-color: white;
+    background-color: #15e415;
 }
 
 a:hover {
+    color: black;
     background-color: black;
+    cursor: pointer;
 }

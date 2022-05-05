@@ -15,10 +15,16 @@
     color: black;
 }
 
+a {
+    color: #15e415;
+}
+
 a:link {
-    background-color: black;
+    background-color: #15e415;
 }
 
 a:hover {
     background-color: white;
+    color: white;
+    cursor: pointer;
 }
