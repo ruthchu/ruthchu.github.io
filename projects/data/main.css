@@ -3,6 +3,11 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.wrapper {
+  font-family: "default";
+  color:#00470b;
+} 
+
 /*BOOKSHELF STYLING---------------------------------------------------------*/
 .bookshelf {
   background-color: #b7ccb6;
